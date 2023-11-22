@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Cocktail extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'ingredients' => 'array',
+        'tags' => 'array'
+    ];
 }
