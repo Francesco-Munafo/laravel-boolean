@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('image')->nullable();
-            $table->string('instruction')->nullable();
+            $table->text('instruction')->nullable();
             $table->string('category')->default('Alcoholic');
             $table->json('ingredients')->nullable();
             $table->json('tags')->nullable();

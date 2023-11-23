@@ -48,38 +48,39 @@ class CocktailSeeder extends Seeder
                     'tags' => ['IBA', 'CONTEMPORARYCLASSIC', 'USA', 'ASIA', 'VEGAN', 'BRUNCH', 'HANGOVER', 'MILD'],
                 ],
                 [
-                    'name' => 'Mojito',
-                    'image' => 'https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg',
-                    'instruction' => 'Muddle mint leaves with sugar and lime juice.
-                Add a splash of soda water and fill the glass with cracked ice.
-                Pour the rum and top with soda water.
-                Garnish and serve with straw.',
+                    'name' => 'Long Island Tea',
+                    'image' => 'https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg',
+                    'instruction' => 'Combine all ingredients (except cola) and pour over ice in a highball glass. Add the splash of cola for color. Decorate with a slice of lemone and serve ',
                     'category' => 'Alcoholic',
                     'ingredients' =>
                     [
                         [
+                            'name' => 'Vodka',
+                            'quantity' => '1/2 oz'
+                        ],
+                        [
                             'name' => 'Rum',
-                            'quantity' => '2/3 oz'
+                            'quantity' => '1/2 oz'
                         ],
                         [
-                            'name' => 'Lime juice',
-                            'quantity' => '1 Lime'
+                            'name' => 'Gin',
+                            'quantity' => '1/2 oz'
                         ],
                         [
-                            'name' => 'Sugar',
-                            'quantity' => '2 tsp'
+                            'name' => 'Tequila',
+                            'quantity' => '1/2 oz'
                         ],
                         [
-                            'name' => 'Mint',
-                            'quantity' => '2/4 leaves'
+                            'name' => 'Lemon juice',
+                            'quantity' => '1/2 lemon'
                         ],
                         [
-                            'name' => 'Soda',
-                            'quantity' => 'qb'
+                            'name' => 'Cola',
+                            'quantity' => '1 splash'
                         ],
                     ],
 
-                    'tags' => ['IBA', 'CONTEMPORARYCLASSIC', 'USA', 'ASIA', 'VEGAN', 'BRUNCH', 'HANGOVER', 'MILD']
+                    'tags' => ['STRONG', 'ASIA', 'STRONGFLAVOR', 'BRUNCH', 'VEGETARIAN', 'SOUR']
                 ],
                 [
                     'name' => 'Sex on the beach',
@@ -138,13 +139,50 @@ class CocktailSeeder extends Seeder
 
 
                 ],
+                [
+                    'name' => 'Gin lemon',
+                    'image' => 'https://www.thecocktaildb.com/images/media/drink/6gdohq1681212476.jpg',
+                    'instruction' => 'For the preparation of the gin lemon you will not need the shaker. Fill the tumbler with ice, pour the gin and lemonade over it. Gently mix and decorate with a slice of lemon. Those who prefer can also add a few mint leaves. Your gin lemon is ready to be served.',
+                    'category' => 'Ordinary Drink',
+                    'ingredients' =>
+                    [
+                        [
+                            'name' => 'Gin',
+                            'quantity' => '6 cl'
+                        ],
+                        [
+                            'name' => 'Lemon juice',
+                            'quantity' => '8 cl'
+                        ],
+                        [
+                            'name' => 'Lemon peel',
+                            'quantity' => '1 slice'
+                        ],
+                        [
+                            'name' => 'Cubes Ice',
+                            'quantity' => 'qb'
+                        ],
+
+                    ],
+
+                    'tags' => ['SIMPLE', 'CLASSIC', 'REFRESHING']
+
+
+                ],
             ];
 
 
 
 
-        for ($i = 0; $i < 20; $i++) {
+        foreach ($cocktails as $cocktail) {
             $new_cocktail = new Cocktail();
+            $new_cocktail->name = $cocktail['name'];
+            $new_cocktail->image = $cocktail['image'];
+            $new_cocktail->instruction = $cocktail['instruction'];
+            $new_cocktail->category = $cocktail['category'];
+            $new_cocktail->ingredients = $cocktail['ingredients'];
+            $new_cocktail->tags = $cocktail['tags'];
+            $new_cocktail->save();
         }
     }
 }
