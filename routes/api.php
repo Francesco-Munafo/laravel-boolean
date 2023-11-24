@@ -22,5 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/cocktails', [CocktailController::class, 'cocktails']);
+Route::get('/cocktails/alcoholic', [CocktailController::class, 'alcoholic']);
+Route::get('/cocktails/analcoholic', [CocktailController::class, 'analcoholic']);
 
 Route::post('/contact', [LeadController::class, 'store']);
