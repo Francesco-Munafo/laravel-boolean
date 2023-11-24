@@ -15,4 +15,19 @@ class CocktailController extends Controller
             'cocktails' => Cocktail::all()
         ]);
     }
+
+    public function analcoholic()
+    {
+        return response()->json([
+            'status' => 'success',
+            'analcoholic' => Cocktail::where('category', 'Non-Alcoholic')->get()
+        ]);
+    }
+    public function alcoholic()
+    {
+        return response()->json([
+            'status' => 'success',
+            'alcoholic' => Cocktail::where('category', 'Alcoholic')->get()
+        ]);
+    }
 }

@@ -116,7 +116,7 @@ class CocktailSeeder extends Seeder
                     'name' => 'Gin lemon',
                     'image' => 'https://www.thecocktaildb.com/images/media/drink/6gdohq1681212476.jpg',
                     'instruction' => 'For the preparation of the gin lemon you will not need the shaker. Fill the tumbler with ice, pour the gin and lemonade over it. Gently mix and decorate with a slice of lemon. Those who prefer can also add a few mint leaves. Your gin lemon is ready to be served.',
-                    'category' => 'Ordinary Drink',
+                    'category' => 'Alcoholic',
                     'ingredients' =>
                     [
                         [
