@@ -86,7 +86,7 @@ class CocktailSeeder extends Seeder
                     'name' => 'Sex on the beach',
                     'image' => 'https://www.thecocktaildb.com/images/media/drink/fi67641668420787.jpg',
                     'instruction' => 'Build all ingredients in a highball glass filled with ice. Garnish with orange slice.',
-                    'category' => 'Ordinary Drink',
+                    'category' => 'Alcoholic',
                     'ingredients' =>
                     [
                         [
