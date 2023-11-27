@@ -25,5 +25,6 @@ Route::get('/mailable', function () {
     $lead = App\Models\Lead::find(1);
 
     //    return new App\Mail\NewLeadEmail($lead);
-    return new App\Mail\NewLeadEmailMd($lead);
+
+    return new App\Mail\NewContact($lead);
 });
